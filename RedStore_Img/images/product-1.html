@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product-1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+
+        }
+        body{
+            background:radial-gradient(#fff,#ffb6b6);
+        }
+        .row{
+            display:flex;
+
+        }
+        .col-1{
+            margin:50px 50px 40px 70px;
+        }
+        .col-1 .main-product{
+            margin:0 0 20px 60px;
+        }
+        .col-1 img:hover{
+            background:pink;
+            border:2px dotted green;
+
+            padding:10px;
+            cursor:pointer;
+
+
+        }
+        .col-2{
+            line-height:40px;
+            font-size:20px;
+            margin:80px 50px 0 50px;
+        }
+        .col-2 .size b{
+            border:1px dotted black;
+            width:20px;
+            padding:7px 10px;
+            margin-left:15px;
+            margin-top:10px;
+        }
+        .col-2 .size b:hover{
+            background:orange;
+            cursor:pointer;
+            font-size:30px;
+        }
+        .btn b{
+            border:1px solid black;
+            padding:20px;
+            width:30px;
+        }
+        .btn b:hover{
+            background:orange;
+            cursor:pointer;
+        }
+        .fas,.far{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-1">
+        <img src="product-1.jpg" width="250px" height="270px" class="main-product">
+        <br><br>
+        <img src="gallery-1.jpg" width="100">
+        <img src="gallery-2.jpg" width="100">
+        <img src="gallery-3.jpg" width="100">
+        <img src="gallery-4.jpg" width="100">
+    </div>
+
+    <div class="col-2">
+        <p>Red color round neck T-shirt for men</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 149.00</p>
+            <br>
+            <h3>Size:</h3>
+
+            <div class="size">
+                <b>S</b>
+                <b>M</b>
+                <b>L</b>
+                <b>XL</b>
+                <b>XXL</b>
+            </div>
+            <br>
+            <select>
+                <option><b>quantity</b></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+                <br><br>
+        <div class="btn">
+            <b>ADD TO CART</b>&nbsp &nbsp &nbsp
+            <b> &nbsp &nbsp BUY NOW &nbsp &nbsp</b>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
