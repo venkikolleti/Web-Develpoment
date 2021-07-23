@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>script 1</title>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="paragraph changed.";
+        }
+    </script>
+</head>
+<body>
+<h1>javascript learning</h1>
+<p id="demo">a paragraph</p>                                   <!......script in head part................./>
+<button type="button" onclick="myFunction()">try it</button>
+
+
+
+<! ...............script in body part......................./>
+
+
+
+<h1>javascipt in html</h1>
+<p id="remo">this is a paragraph</p>
+<button type="button" onclick="myAction()">click me</button>
+
+    <script>
+        function myAction(){
+            document.getElementById("remo").innerHTML="paragraph changed to a sentence.";
+        }
+    </script>
+
+
+<h1>javascipt in html</h1>
+<p id="hemo"><img src="b1.jpeg"></p>
+<button type="button" onclick="myReaction()">click me</button>
+
+    <script>
+        function myReaction(){
+            document.getElementById("hemo").innerHTML="image goneeeeeeeeeeee";
+        }
+    </script>
+
+
+<h4>window.alert()</h4>
+<h4>document.write()</h4>
+<h4>innnerhtml</h4>
+<h4>console.log()</h4>
+
+<h3>using alert box to display the data</h3>
+<script>
+    window.alert(5+6);
+    window.alert("server not found venki");
+</script>
+
+<h3>using document write to display the data</h3>
+<script>
+    document.write(5+6);
+    document.write("server not found venki");
+
+</script>
+<br>
+<h3>using button click on document write to display the data will delete all existing data in html</h3>
+<button onclick="document.write(50+60)" > try it </button>
+<br>
+
+
+<h3>inner html to dispaly data</h3>
+<p id="lemo"></p>
+<script>
+    document.getElementById("lemo").innerHTML=111+222;
+</script>
+
+
+<!............................statements......................../>
+
+<h1>javascript statements</h1>
+<h4>statements separated bt semicoloumn</h4>
+<p id="aemo"></p>
+<script>
+    var x=10;
+    var y=20;
+    var z=x+y;
+document.getElementById("aemo").innerHTML=z;
+</script>
+
+
+
+<!.........................strings.........................../>
+
+<h1>javascript strings</h1>
+<p id="loo"></p>
+<script>
+    document.getElementById("loo").innerHTML="venkaiah kolleti";
+</script>
+
+
+<!...............javascript variables................./>
+<h1>javascript variables</h1>
+<h4>uses "var" keywords to declare variables,  equalsign(=) is to used assign values</h4>
+<p id="hoo"> </p>
+<script>
+    var x;
+    x=100;
+    var y=200;
+    document.getElementById("hoo").innerHTML=x;
+</script>
+
+
+
+<!..................arithematic operators................/>
+
+
+<h1>arithematic operators</h1>
+<p id="goo"> </p>
+<script>
+
+    var x=100;
+    var y=200;
+    var z=x*y
+    var a=x-y
+    document.getElementById("goo").innerHTML=z;
+
+
+</script>
+
+
+<h4>adding two strings</h4>
+<p id="eee"></p>
+<script>
+    var x="telugu"
+    var y="english"
+    var z="maths"
+    document.getElementById("eee").innerHTML=x+" "+y+" "+z;
+</script>
+
+<h5>for comments we written like (//) or { /* between */ }</h5>
+
+
+
+</body>
+</html>

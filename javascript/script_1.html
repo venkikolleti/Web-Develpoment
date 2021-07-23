@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>java script 1</title>
+</head>
+<body>
+<script type="text/javascript">
+
+   alert("welcome venki");
+
+   document.write("<h1>java script is a popular programming language </h1>","<br>")
+
+   document.write("lets start   learninig javascript <br/>");
+
+   var x=100;
+   var y="telugu";
+   var z="english";
+   document.write(x," ",y," ",z, "<br>");
+
+   var a=15;
+   var b=43;
+   var s=a+b;
+   var c=a-b;
+   document.write(s,"<br>",c,"<br>");
+
+    var name="venki";
+    var age=17;
+    document.write("my name is ",name +" my age is ",age,"<br>" );
+
+
+    var x="venkaiah";
+    var y="kolleti";
+    document.write(x+" "+y,"<br>");
+
+</script>
+<br><br>
+
+
+
+<!........................functions in javascript............../>
+
+
+<h2>function in javascript</h2>
+<script>
+    function a() {
+    alert("welocme to javascript");
+    document.write("alert is working");
+    }
+
+a();
+</script>
+
+<h3>creating button in functions</h3>
+<form>
+    <input type="button" value="click me" onclick="a();">
+</form>
+
+
+
+<h4>alert working</h4>
+<script>
+    function b(x){
+    alert(x);
+    }
+b("kolleti")
+</script>
+<br><br>
+
+
+<script>
+    function c(x,y){
+        document.write(x+" is smaller than "+y,"<br>");
+    }
+
+c(12,43)
+c(11,22)
+</script>
+
+<br><br>
+
+<script>
+    function d(){
+        return "my answer";
+    }
+document.write(d())
+</script>
+
+<br><br>
+
+<script>
+    function add(x,y){
+        var z=x+y;
+        return "sum of numbers "+z+"<br>";
+    }
+document.write(add(10,25));
+document.write(add(19,40));
+document.write(add(100,20));
+</script>
+
+<br><br>
+
+<script>
+    function a() {
+            document.write("my first function<br>");
+
+    }
+
+        function b() {
+            document.write("my second function<br>");
+
+    }
+    function c() {
+            a();
+            b();
+    }
+ c()
+</script>
+
+<br><br>
+<h5>global and local variable</h5>
+<!..............................global variable..................../>
+<script>
+    var nv="rgukt rkvalley <br/>";
+    function a(){
+        document.write("my first result is "+nv);
+    }
+    function b(){
+        document.write("my second result is "+nv);
+    }
+a();
+b();
+document.write("my outside "+nv);
+</script>
+<br>
+
+
+
+<!...............................local varaiable........................./>
+<script>
+
+    function e(){
+        var nav="rgukt rkvalley <br/>";
+        document.write("my first result is "+nav);
+    }
+    function f(){
+        document.write("my second result is "+nav);
+    }
+e();
+f();
+document.write("my outside "+nav);
+</script>
+<br><br>
+
+<script>
+    var x=2+10;
+    document.write(x)
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

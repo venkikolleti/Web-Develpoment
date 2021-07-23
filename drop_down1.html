@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dropdown</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style type="text/css">
+    *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+    }
+    body{
+      background-image:url("background.jpg");
+      background-size:cover;
+      background-position:top;
+
+
+    }
+    .menu-bar{
+      background:green;
+      text-align:center;
+
+    }
+    .menu-bar ul{
+      display:inline-flex;
+      list-style-type:none;
+      color:white;
+    }
+    .menu-bar ul li{
+      width:120px;
+      margin:15px 20px;
+      padding:5px 45px;
+    }
+    .menu-bar ul li a{
+      text-decoration:none;
+      color:white;
+
+    }
+    .active, .menu-bar ul li:hover{
+        background:orange;
+        border-radius:3px;
+    }
+    .menu-bar .fas{
+        margin-right:8px;
+    }
+    .sub-menu-1{
+        display:none;
+    }
+    .menu-bar ul li:hover .sub-menu-1{
+        display:block;
+        position:absolute;
+        background:blue;
+        margin-top:15px;
+        margin-left:-15px;
+
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul{
+        display:block;
+        margin:10px;
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul li{
+        width:150px;
+        padding:10px;
+        border-bottom:1px dotted white;
+        background:transparent;
+        border-radius:0;
+        text-align:left;
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+        border-bottom:none;
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+        text-transform:uppercase;
+        color:navy;
+    }
+    .fa-angle-right{
+        float:right;
+    }
+    .sub-menu-2{
+        display:none;
+    }
+
+    .hover-me:hover .sub-menu-2{
+        position:absolute;
+        display:block;
+        margin-top:-40px;
+        margin-left:140px;
+        background:grey;
+
+    }
+  </style>
+</head>
+<body>
+<div class="menu-bar">
+<ul>
+  <li class="active"><a href="#"><i class="fas fa-home"></i>home</a></li>
+  <li><a href="#"><i class="fas fa-user"></i>about us</a>
+
+</li>
+  <li><a href="#"><i class="fas fa-clone"></i>services</a>
+      <div class="sub-menu-1">
+        <ul>
+          <li><a href="#">mission</a></li>
+          <li><a href="#">vision</a></li>
+          <li><a href="#">team</a></li>
+        </ul>
+    </div>
+  </li>
+  <li><a href="#"><i class="fas fa-users"></i>clients</a>
+        <div class="sub-menu-1">
+        <ul>
+          <li><a href="#">u s a</a></li>
+          <li class="hover-me"><a href="#">delhi</a><i class="fas fa-angle-right"></i>
+          <div class="sub-menu-2">
+            <ul>
+                  <li><a href="#">social media</a></li>
+                  <li><a href="#">marketing</a></li>
+                  <li><a href="#">finance</a></li>
+              </ul>
+          </div>
+
+          </li>
+          <li class="hover-me"><a href="#">hyderabad</a><i class="fas fa-angle-right"></i>
+          <div class="sub-menu-2">
+            <ul>
+                  <li><a href="#">html</a></li>
+                  <li><a href="#">css</a></li>
+                  <li><a href="#">javascript</a></li>
+              </ul>
+          </div>
+
+          </li>
+        </ul>
+    </div>
+  </li>
+  <li><a href="#"><i class="fas fa-user"></i>investers</a></li>
+  <li><a href="#"><i class="fas fa-tags"></i>pricing</a></li>
+  <li><a href="#"><i class="fas fa-edit"></i>training</a></li>
+  <li><a href="#"><i class="fas fa-phone"></i>contact</a></li>
+</ul>
+  </div>
+</body>
+</html>

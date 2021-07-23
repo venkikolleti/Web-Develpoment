@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ecomerce 1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        .navbar{
+            display:flex;
+            align-items:center;
+            padding:20px;
+        }
+        nav{
+            flex:1;
+            text-align:right;
+        }
+        nav ul{
+            display:inline-block;
+            list-style-type:none;
+        }
+        nav ul li{
+            display:inline-block;
+            margin-right:20px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:black;
+            text-transform:uppercase;
+            font-weight:600;
+            padding:20px;
+        }
+        nav ul li a:hover{
+            background:green;
+            color:white;
+        }
+
+        .container{
+            max-width:1300px;
+            margin:auto;
+            padding-left:25px;
+            padding-right:25px;
+            background:radial-gradient(#fff,#ffa6a6);
+            font-family:san-serif;
+        }
+        .row{
+            display:flex;
+            align-items:center;
+            flex-wrap:wrap;
+            justify-content:space-around;
+
+        }
+        .col-2{
+            flex-basis:50%;
+            min-width:350px;
+            cursor:pointer;
+        }
+        .col-2 img{
+            max-width:90%;
+            padding:0px 0;
+            cursor:pointer;
+        }
+        .col-2 h1{
+            font-size:2.4em;
+            line-height:50px;
+            margin:25px 25px 25px 25px;
+            text-transform:capitalize;
+        }
+        .col-2 p{
+            line-height:30px;
+            margin:25px;
+        }
+        .btn{
+
+            background-color:red;
+            text-decoration:none;
+            color:white;
+            padding: 10px 30px;
+            border-radius:30px;
+            margin:20px 30px;
+        }
+        .btn:hover{
+            background:orange;
+        }
+        .categories{
+            margin:70px 0;
+            max-width:1080px;
+            margin:auto;
+            margin-top:60px;
+            padding-left:25px;
+            padding-right:25px;
+        }
+        .col-3{
+            flex-basis:30%;
+            min-width:250px;
+            margin-bottom:30px;
+        }
+        .col-3 img{
+            width:100%;
+            cursor:pointer;
+        }
+
+        .small-container{
+            max-width:1080px;
+            margin:auto;
+            padding:0 25px;
+
+        }
+        .small-container h2{
+            text-align:center;
+            margin:60px auto;
+            text-transform:uppercase;
+            font-size:2em;
+        }
+        .small-container h4{
+            color:#555;
+            font-weight:normal;
+            margin-bottom:7px;
+            margin-left:25px;
+        }
+        .small-container .rating{
+            margin-left:25px;
+        }
+        .col-4 p{
+            font-size:14px;
+            margin-top:7px;
+            margin-left:25px;
+        }
+        .col-4{
+            flex-basis:20%;
+            padding:10px;
+            min-width:200px;
+            margin-bottom:50px;
+
+        }
+
+        .col-4:hover{
+            transform:translateY(-25px)
+        }
+        .col-4 img{
+            width:100%;
+            cursor:pointer;
+        }
+
+        .col-4 .rating .fas,.far{
+            color:orange;
+        }
+
+        .offer-container{
+            display:flex;
+            margin:90px 0;
+            background:radial-gradient(#fff,#ffb6b6);
+            padding:60px 0;
+        }
+        .offer-container .col-5{
+            flex-basis:40%;
+            min-width:500px;
+
+
+        }
+        .offer-container .col-5 img{
+            width:100%;
+            padding:30px;
+            cursor:pointer;
+        }
+
+        .offer-container .col-5 a{
+            margin-left:0;
+        }
+        .col-5 h1{
+            text-transform:uppercase;
+            margin:20px 0 10px 0;
+            font-size:2.2em;
+        }
+
+        .text-container .row{
+            display:flex;
+            max-width:1080px;
+            margin:auto;
+        }
+        .text-container .col-6{
+            flex-basis:30%;
+            min-width:150px;
+            text-align:center;
+            box-shadow:0 0 20px 0px rgba(0,0,0,0.3);
+            cursor:pointer;
+            padding:60px 10px;
+        }
+
+        .text-container .col-6:hover{
+            transform:translateY(-15px);
+        }
+        .text-container .col-6 img{
+            width:20%;
+            border-radius:50%;
+            cursor:pointer;
+        }
+
+        .col-6 .rating{
+            color:orange;
+        }
+        .col-6 p{
+            color:#555;
+            font-size:14px;
+        }
+        .col-6 .fa-quote-left{
+            color:orange;
+            margin-bottom:20px;
+            font-size:22px;
+        }
+
+
+
+        .brands{
+            margin:100px auto;
+            max-width:1080px;
+        }
+        .brands .col-7{
+            width:160px;
+
+        }
+
+        .brands .col-7 img{
+            width:100%;
+            cursor:pointer;
+            filter:grayscale(100%);
+            cursor:pointer;
+        }
+        .brands .col-7 img:hover{
+            filter:grayscale(0);
+        }
+
+        .footer{
+            background:black;
+            color:white;
+            font-size:14px;
+            padding:60px 0 20px
+            width:1080px;
+            padding:70px;
+        }
+        .footer-container .row{
+            display:flex;
+            line-height:30px;
+        }
+
+        .footer-col-1 .footer-col-2 .footer-col-3 .footer-col-4{
+            flex-basis:25%;
+            width:150px;
+        }
+        .footer-col-2 img{
+            margin-left:70px;
+            cursor:pointer;
+        }
+        .footer ul{
+            list-style-type:none;
+            margin-left:20px;
+            color:#555;
+        }
+        .footer p{
+            color:#666;
+        }
+        .footer h3{
+            font-size:20px;
+        }
+        .footer .foot-img{
+            margin-top:20px;
+        }
+
+
+
+        .final{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="navbar">
+    <div class="logo">
+        <img src="amazon.png" width="170px" height="70px">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">account</a></li>
+        </ul>
+    </nav>
+        <img src="cart.png" width="40px" height="30px">
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <h1>Give your workout<br> a new style</h1>
+            <p>Success isnt always about greatness.It is about consistency.Consistence<br>
+                hard work gains success.Greatness will come.</p>
+            <a href="#" class="btn">Explore Now &#8594;</a>
+        </div>
+        <div class="col-2">
+            <img src="image1.png">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="categories">
+    <div class="row">
+        <div class="col-3">
+            <img src="category-1.jpg">
+        </div>
+        <div class="col-3">
+            <img src="category-2.jpg">
+        </div>
+        <div class="col-3">
+            <img src="category-3.jpg">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="small-container">
+    <h2>Featured Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <a href="product-1.html" target="blank"><img src="product-1.jpg"></a>
+            <h4>Red T-shirt for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 199.00</p>
+        </div>
+
+
+        <div class="col-4">
+            <img src="product-2.jpg">
+            <h4>Black-white shoes</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 600.00</p>
+        </div>
+        <div class="col-4">
+            <img src="product-3.jpg">
+            <h4>Night wear for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 299.00</p>
+        </div>
+
+
+        <div class="col-4">
+            <img src="product-4.jpg">
+            <h4>Blue T-shirt for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 249.00</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <h2>recent Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="product-5.jpg">
+            <h4>white shoes for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 799.00</p>
+        </div>
+
+
+        <div class="col-4">
+            <img src="product-6.jpg">
+            <h4>Black T-shirt for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 199.00</p>
+        </div>
+        <div class="col-4">
+            <img src="product-7.jpg">
+            <h4>socks shoe for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 149.00</p>
+        </div>
+
+
+        <div class="col-4">
+            <img src="product-8.jpg">
+            <h4>FOSSIL watch for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 1,199.00</p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-4">
+            <img src="product-9.jpg">
+            <h4>Watch for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 499.00</p>
+        </div>
+
+
+        <div class="col-4">
+            <img src="product-10.jpg">
+            <h4>Black-Sport shoes</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 899.00</p>
+        </div>
+        <div class="col-4">
+            <img src="product-11.jpg">
+            <h4>White formal shoes</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 799.00</p>
+        </div>
+
+
+        <div class="col-4">
+            <img src="product-12.jpg">
+            <h4>Black-Lower for men</h4>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p><i class="fas fa-rupee-sign"></i> 299.00</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="offer">
+    <div class="offer-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="exclusive.png" class="offer-img">
+            </div>
+
+            <div class="col-5">
+            <p>Exclusively Available on Amazon</p>
+            <h1>smart band 4</h1>
+            <small>the mi smart band 4 features a 39.9% larger (than mi Band 3) AMOLED color full touch display with
+                adjustable brightness,so everything is clear as can be.</small><br><br><br>
+
+                <a href="#" class="btn">Buy Now  &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="textinomial">
+    <div class="text-container">
+        <div class="row">
+            <div class="col-6">
+                <i class="fas fa-quote-left"></i><br>
+                <p>Its very good and pretty item.It has wonderful design perfectly fitted to hand.Nice product. I really
+                like it so much.Pls all of you try once.</p>
+                <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                </div><br>
+                <img src="user-1.png">
+                <h3>saranya</h3>
+            </div>
+
+            <div class="col-6">
+                <i class="fas fa-quote-left"></i>
+
+                <p>Terrible purchase.It will be outstanding. Nice Design.work very smoothly touch screen feels you a better
+                    exprience. looking good.wonderful deisgn.</p>
+                <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                </div><br>
+                <img src="user-2.png">
+                <h3>roshan</h3>
+            </div>
+
+            <div class="col-6">
+                <i class="fas fa-quote-left"></i>
+                <p>Its just okay.some time it will suddenly turn off.but just okay.It will be a good product at this price.
+                Don't prefer this for longer usage.</p><br>
+                <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                </div><br>
+                <img src="user-3.png">
+                <h3>vanmadi</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="brands">
+    <div class="row">
+        <div class="col-7">
+            <img src="logo-godrej.png">
+        </div>
+        <div class="col-7">
+            <img src="logo-oppo.png">
+        </div>
+        <div class="col-7">
+            <img src="logo-coca-cola.png">
+        </div>
+        <div class="col-7">
+            <img src="logo-paypal.png">
+        </div>
+        <div class="col-7">
+            <img src="logo-philips.png">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for android and ios mobile phone.</p>
+
+                <img src="play-store.png" height="70px" width="150px" class="foot-img">
+                <img src="app-store.png" height="70px" width="150px" class="foot-img">
+            </div>
+            <div class="footer-col-2">
+                <img src="amazon.png" height="90px" width="200px" >
+                <p>our purchase is to sustainably make the pleasure and<br>&nbsp &nbsp &nbsp &nbsp benifits of sports accesisble to the marry.</p>
+            </div>
+
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>coupons</li>
+                    <li>blog post</li>
+                    <li>Return policy</li>
+                    <li>join affiliate</li>
+                </ul>
+            </div>
+
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+            <br><br><br>
+            <hr>
+            <br>
+            <div class="final">
+                copyright@venki.blogspot.com
+            </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

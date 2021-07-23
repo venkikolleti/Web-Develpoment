@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta name="viewport" content="with=device-width,initial-scale=1.0">
+    <title>web designing 4</title>
+    <style type="text/css">
+*{
+        margin:0;
+        padding:0;
+}
+
+header{
+        background-image:url("banner.png");
+        background-position:center;
+        background-size:cover;
+        position:relative;
+}
+nav a img{
+        height:80px;
+        width:200px;
+}
+nav{
+    display:flex;
+    padding:2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links ul {
+        text-align:right;
+
+}
+.nav-links ul li{
+        list-style:none;
+        display:inline-block;
+        padding:8px 16px;
+        position:relative;
+}
+.nav-links ul li a{
+        color:white;
+        text-transform:uppercase;
+        text-decoration:none;
+        font-size:1.2em;
+}
+.nav-links ul li::after{
+        content:'';
+        width:0%;
+        height:5px;
+        background:black;
+        display:block;
+        margin:auto;
+        transition:01s;
+}
+.nav-links ul li:hover::after{
+        width:100%;
+}
+.text-box{
+        width:90%;
+        color:black;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align:center;
+}
+.text-box h1{
+        font-size:2em;
+}
+.text-box p{
+        margin:10px 0 40px;
+        font-size:1.2em;
+}
+.hero{
+        display:inline-block;
+        text-decoration:none;
+        color:yellow;
+        border:3px solid maroon;
+        padding:12px 34px;
+        background:transparent;
+        position:relative;
+
+}
+.hero:hover{
+        border:3px solid orange;
+        background:orange;
+        transition:0.2s;
+}
+
+
+.course{
+        width:80%;
+        margin:auto;
+        text-align:center;
+        padding-top:100px;
+        }
+.course h1{
+        font-size:2.2em;
+        font-weight:600;
+
+}
+.course p{
+        color:grey;
+        font-size:1em;
+        font-weight:300;
+        line-height:22px;
+        padding:10px;
+}
+.row{
+        margin-top:5px;
+        display:flex;
+        justify-content:space-between;
+}
+.course-col{
+        flex-basis:40%;
+        background:#fcd2a2;
+        border-radius:10px;
+        margin-top:40px;
+        margin-bottom:5px;
+        padding:20px 12px;
+        box-sizing:border-box;
+}
+.course h3{
+        text-align:center;
+        font-weight:600;
+        margin:10px 0;
+}
+.course-col:hover{
+        box-shadow:5px 5px 5px 5px;
+}
+
+.campus{
+        width:100%;
+        margin:auto;
+        text-align:center;
+        padding-top:50px;
+}
+.campus h1{
+        font-size:2.4em;
+        font-weight:600px;
+        text-transform:uppercase;
+}
+.campus p{
+        color:grey;
+        font-size:0.9em;
+}
+
+.campus-col{
+        felx-basis:32%;
+        border-radius:15px;
+        margin-top:40px;
+        margin-left:40px;
+        margin-bottom:30px;
+        position:relative;
+        overflow:hidden;
+}
+
+.campus-col img{
+        width:400px;
+
+}
+.layer{
+        background:transparent;
+        height:400%;
+        width:400%;
+        position:absolute;
+        top:0;
+        left:0;
+        transition:0.2s;
+
+}
+.layer:hover{
+        background:rgba(226,0,0,0.7);
+}
+
+
+
+.facilities{
+        width:80%;
+        margin:auto;
+        text-align:center;
+        padding-top:100px;
+}
+.facilities h1{
+        text-transform:uppercase;
+        font-size:2.4em;
+        font-weigth:600;
+
+}
+.facilities p{
+        font-size:1em;
+        color:grey;
+
+}
+
+.facilities-col{
+        flex-basis:32%;
+        border-radius:10px;
+        margin-bottom:5%;
+        text-align:left;
+
+}
+.facilities-col img{
+        width:100%;
+        border-radius:10px;
+        margin-top:40px;
+}
+
+.facilities-col p{
+        padding:0;
+}
+.facilities-col h3{
+        margin-top:16px;
+        margin-bottom:15px;
+        text-align:left;
+}
+
+
+.cta{
+        margin:100px auto;
+        width:80%;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(banner2.jpg);
+        background-position:center;
+        background-size:cover;
+        border-radius:10px;
+        text-align:center;
+        padding:100px 0;
+}
+
+.cta h1{
+        color:white;
+        margin-bottom:40px;
+        padding:0;
+}
+.cta a{
+        color:white;
+        text-transform:uppercase;
+}
+
+
+
+.footer{
+        width:100%;
+        text-align:center;
+        padding:30px 0;
+}
+
+.footer h4{
+        margin-bottom:25px;
+        margin-top:20px;
+        font-size:1.2em;
+        font-weight:600;
+}
+
+.footer p{
+        color:grey;
+        font-size:0.9em;
+}
+    </style>
+</head>
+
+<body>
+<header class="abc">
+    <nav>
+
+        <a href="#"><img src="download1.jpeg"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="http://www.rgukt.in/" target="blank">home</a></li>
+                <li><a href="https://rguktrkv.ac.in/Institute.php?view=AboutRGUKT" target="blank">About</a></li>
+                <li><a href="https://www.rguktrkv.ac.in/Library/" target="blank">library</a></li>
+                <li><a href="http://www.rgukt.in/R-Careers" target="blank">career</a></li>
+                <li><a href="https://www.rguktrkv.ac.in/CDPC/" target="blank">placement cell</a></li>
+                <li><a href="http://www.rgukt.in/R-ContactUs" target="blank">contact us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="text-box">
+    <br><br><br><br><br><br>
+    <h1>**** INDIA'S BIGGEST UNIVERSITY ****</h1>
+    <p>Ragiv ghandhi university of knowledge and technologies are also one of the top universities in India. <b> Rkvalley,Nuzivedu,Ongole,Srikakulam four beautiful campus located in ap</p>
+    <a href="http://www.rgukt.in/" target="_blank" class="hero"><b>click here to know more</b></a>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</header>
+
+<section class="course">
+<h1>COURSES WE OFFER</h1>
+    <p>couses provided with free off cost with laptop</p>
+    <div class="row">
+        <div class="course-col">
+            <h3>intermediate</h3>
+            <p>Intermediate divide into two years puc1 and puc2 .Students will learn all basics in this period of time.In puc
+                again there are two groups MPC AND MBIPC.students can choose thier interested group in puc.</p>
+        </div>
+
+        <div class="course-col">
+            <h3>engineering</h3>
+            <p>Engineering containing four years with 7 top branches. Branches available CSE,ECE,EEE,MME,Chemical,Mechanical,Civil.
+                Student can choose their favourite branch on the basis of puc grading.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!.......................campus..................../>
+<br><br><br>
+<section class="campus">
+    <h1>our global campus</h1><br>
+    <p>Beautiful campuses with full of nature, peace full places. </p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="r6.jpeg" height="250">
+            <div class="layer">
+                <h3>rgukt</h3>
+            </div>
+        </div>
+
+        <div class="campus-col">
+            <img src="r1.jpeg" height="250" >
+            <div class="layer">
+                <h3>rgukt</h3>
+            </div>
+        </div>
+
+        <div class="campus-col">
+            <img src="r2.jpeg" height="250" >
+            <div class="layer">
+                <h3>rgukt</h3>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<!....................facilities............................/>
+<section class="facilities">
+    <h1>Facilities</h1>
+    <p>providing central library and all proper facilities all type of sport acitivities</p>
+    <div class="row">
+        <div class="facilities-col">
+            <img src="library.png">
+            <h3>world class library</h3>
+            <p>providing all types of books with peaceful place.</p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="basketball.png">
+            <h3>Largest play ground</h3>
+            <p>providing all equipment for playing specially trained for national sports meets.</p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="cafeteria.png">
+            <h3>Tasty and healthy food</h3>
+            <p>providing tasty and healthy food. Varients of food avialable.</p>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+<!...........................call to cation...................../>
+
+<section class="cta">
+    <h1>Enroll for our various online courses<br> Anywhere from the world</h1>
+    <a href="http://www.rgukt.in/R-ContactUs" target=blank class="hero">Contact Us</a>
+</section>
+
+
+
+<!.............................footer..................../>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Catering to the Educational Needs of Gifted Rural Youth of Andhra Pradesh<br>
+
+(Established by the Govt. of Andhra Pradesh and recognized as per Section 2(f) of UGC Act, 1956)</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
